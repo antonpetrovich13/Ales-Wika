@@ -1,4 +1,11 @@
-//АНИМАЦИЯ ПРИ СКРОЛЛЕ
+// ПАРАЛАКС
+$(window).scroll(function (event) {
+	var s = 0 - $(this).scrollTop() / 3;
+	$('.main__background').css('transform', 'translate3d(0, ' + s + 'px, 0)');
+});
+
+
+/*//АНИМАЦИЯ ПРИ СКРОЛЛЕ
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -220,3 +227,4 @@ document.addEventListener('DOMContentLoaded', function () {
 		return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
 	}
 });
+*/
