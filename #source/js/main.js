@@ -1,1 +1,1 @@
-//@prepros-append script.js
+//@prepros-append juery.js
