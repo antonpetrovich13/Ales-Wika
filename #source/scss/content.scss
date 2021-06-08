@@ -156,11 +156,16 @@
 	}
 }
 
+.background {
+	background: url("../img/history/floral.jpg") 0 0 no-repeat;
+	background-size: cover;
+}
+
 // <HISTORY>  ================================================
 .history {
 	padding: 50px 0px;
-	background: url("../img/history/floral.jpg") 0 0 no-repeat;
-	background-size: cover;
+	/*background: url("../img/history/floral.jpg") 0 0 no-repeat;
+	background-size: cover;*/
 
 	&__head {
 	}
@@ -363,17 +368,13 @@
 
 // <EVENTS>  ================================================
 .events {
-	padding: 50px 0px;
 	position: relative;
-	&:before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100px;
-		top: 14px;
-		left: 0;
-		box-shadow: 0px 40px 15px #fff;
-		transform: rotate(180deg);
+	padding: 50px 0px;
+	&__background {
+		padding: 50px 20px;
+		border-radius: 50px;
+		background-color: #fff;
+		box-shadow: 0px 0px 30px rgba(70, 2, 66, 0.301);
 	}
 	&__head {
 	}
@@ -388,8 +389,10 @@
 	margin: 60px 0px 0px 0px;
 	letter-spacing: 3px;
 	&__title {
+		font-style: oblique;
 		text-align: center;
 		font-size: 21px;
+		font-weight: 700;
 	}
 
 	&__wrap {
@@ -400,7 +403,7 @@
 		display: flex;
 		align-items: center;
 		&_2 {
-			margin: 30px 0px;
+			margin: 30px 0px 0px 0px;
 			justify-content: flex-end;
 		}
 	}
@@ -408,7 +411,7 @@
 	&__column {
 		margin: 0px 25px;
 		&_img {
-			flex: 0 1 150px;
+			flex: 0 1 130px;
 		}
 	}
 	&__image {
@@ -421,6 +424,17 @@
 		font-size: 20px;
 		text-align: center;
 		margin: 0px 0px 35px 0px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 20%;
+			height: 0.2px;
+			bottom: -5px;
+			left: 50%;
+			background-color: #000;
+			transform: translate(-50%, 0);
+		}
 	}
 
 	&__time {
