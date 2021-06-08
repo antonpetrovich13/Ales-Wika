@@ -291,7 +291,7 @@ a {
       right: -45%; } }
   @media (max-width: 795px) {
     .history {
-      padding: 30px 0px; }
+      padding: 30px 0px 50px 0px; }
       .history__body {
         margin: 50px 0px 0px 0px; }
       .history__image {
