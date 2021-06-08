@@ -7,5 +7,4 @@ let swiper = new Swiper('.history__body', {
 	speed: 800,
 	loop: true,
 	effect: "fade",
-	zoom: true,
 });
