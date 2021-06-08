@@ -159,7 +159,6 @@
 // <HISTORY>  ================================================
 .history {
 	padding: 50px 0px;
-	background-color: #000;
 	background: url("../img/history/floral.jpg") 0 0 no-repeat;
 	background-size: cover;
 
@@ -268,20 +267,38 @@
 
 // <HEAD>  ================================================
 .head {
+	padding: 7px 0px;
+	position: relative;
+	z-index: 2;
 	letter-spacing: 4px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	& span {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		border-radius: 10px;
+		box-shadow: 0px 20px 80px rgb(255, 255, 255) inset;
+		transform: translate(-50%, 0);
+	}
 	&__title {
 		color: rgb(0, 0, 0);
 		font-size: 36px;
 		border-radius: 3px;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__image {
 		margin: 20px 0px;
 		position: relative;
+		z-index: 2;
 		&:before {
 			content: "";
 			position: absolute;
@@ -310,14 +327,29 @@
 	}
 
 	&__subtitle {
+		position: relative;
+		z-index: 2;
 		font-size: 22px;
 		text-align: center;
+	}
+	@media (max-width: 1058px) {
+		& span {
+			width: 70%;
+		}
+	}
+	@media (max-width: 765px) {
+		& span {
+			width: 90%;
+		}
 	}
 	@media (max-width: 570px) {
 		letter-spacing: 2px;
 	}
 	@media (max-width: 500px) {
 		letter-spacing: 1px;
+		& span {
+			width: 100%;
+		}
 		&__image {
 			margin: 10px 0px;
 		}
